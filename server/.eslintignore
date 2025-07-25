@@ -1,4 +1,4 @@
 dist
 node_modules
-database/config/config.js
-database/**/*.js
+src/infrastructure/database/config/config.js
+src/infrastructure/database/**/*.js
