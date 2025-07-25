@@ -1,6 +1,8 @@
 import { Sequelize } from 'sequelize-typescript';
 import config from './config/config';
 import { Dialect } from 'sequelize/types/sequelize';
+import { Project } from './models/project.model';
+import { Task } from './models/task.model';
 
 export const databaseProviders = [
   {
@@ -16,7 +18,7 @@ export const databaseProviders = [
           port: config.development.port,
         },
       );
-      sequelize.addModels([]);
+      sequelize.addModels([Project, Task]);
       await sequelize.sync();
       return sequelize;
     },
