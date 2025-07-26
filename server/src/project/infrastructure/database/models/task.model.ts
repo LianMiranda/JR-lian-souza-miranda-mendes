@@ -9,7 +9,7 @@ import {
   ForeignKey,
   BelongsTo,
 } from 'sequelize-typescript';
-import { Project } from './project.model';
+import { ProjectModel } from './project.model';
 
 @Table({ tableName: 'Task' })
 export class Task extends Model {
@@ -26,12 +26,12 @@ export class Task extends Model {
   @Column({ type: DataType.ENUM('todo', 'doing', 'done') })
   status: 'todo' | 'doing' | 'done';
 
-  @ForeignKey(() => Project)
+  @ForeignKey(() => ProjectModel)
   @Column({ type: DataType.UUID })
   project_id: string;
 
-  @BelongsTo(() => Project)
-  project: Project;
+  @BelongsTo(() => ProjectModel)
+  project: ProjectModel;
 
   @CreatedAt
   @Column({ type: DataType.DATE })

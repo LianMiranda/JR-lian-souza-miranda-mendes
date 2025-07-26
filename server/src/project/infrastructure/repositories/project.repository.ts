@@ -2,6 +2,7 @@ import { Project } from 'src/domain/entities/project.entity';
 import { ProjectModel } from 'src/infrastructure/database/models/project.model';
 import { IProjectRepository } from 'src/domain/repositories/project.repository.interface';
 import { ProjectMapper } from '../mappers/project.mapper';
+import { CustomError } from 'src/shared/errors/custom-error';
 
 export class ProjectRepository implements IProjectRepository {
   constructor(private readonly projectModel: typeof ProjectModel) {}
@@ -36,12 +37,20 @@ export class ProjectRepository implements IProjectRepository {
     return ProjectMapper.toDomain(project);
   }
 
-  async update(id: string, value: Partial<Project>): Promise<boolean> {
-    const [updatedRows] = await this.projectModel.update(value, {
-      where: { id },
-    });
+  async update(value: Project): Promise<Project> {
+    try {
+      const [updatedRows] = await this.projectModel.update(value, {
+        where: { id: value.id },
+      });
 
-    return updatedRows > 0;
+      if (updatedRows === 0) {
+        throw new CustomError('No rows were updated', 404);
+      }
+
+      return this.findById(value.id);
+    } catch (error) {
+      throw new CustomError('Failed to update project', 500);
+    }
   }
 
   async delete(id: string): Promise<void> {
