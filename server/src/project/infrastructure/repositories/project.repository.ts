@@ -1,8 +1,8 @@
-import { Project } from 'src/domain/entities/project.entity';
-import { ProjectModel } from 'src/infrastructure/database/models/project.model';
-import { IProjectRepository } from 'src/domain/repositories/project.repository.interface';
+import { IProjectRepository } from 'src/project/domain/repositories/project.repository.interface';
 import { ProjectMapper } from '../mappers/project.mapper';
 import { CustomError } from 'src/shared/errors/custom-error';
+import { ProjectModel } from '../database/models/project.model';
+import { Project } from 'src/project/domain/entities/project.entity';
 
 export class ProjectRepository implements IProjectRepository {
   constructor(private readonly projectModel: typeof ProjectModel) {}

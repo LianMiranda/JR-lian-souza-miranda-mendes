@@ -1,5 +1,5 @@
-import { Project } from 'src/domain/entities/project.entity';
 import { BaseRepositoryInterface } from '../../../shared/domain/repositories/base.repository.interface';
+import { Project } from '../entities/project.entity';
 
 export interface IProjectRepository extends BaseRepositoryInterface<Project> {
   save(value: Project): Promise<void>;

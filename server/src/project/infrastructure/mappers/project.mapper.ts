@@ -1,4 +1,4 @@
-import { Project } from 'src/domain/entities/project.entity';
+import { Project } from "src/project/domain/entities/project.entity";
 
 export class ProjectMapper {
   static toDomain(model: any): Project {
