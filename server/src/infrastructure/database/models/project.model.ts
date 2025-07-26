@@ -12,7 +12,7 @@ import {
 import { Task } from './task.model';
 
 @Table({ tableName: 'Project' })
-export class Project extends Model {
+export class ProjectModel extends Model {
   @PrimaryKey
   @Default(DataType.UUIDV4)
   @Column({ type: DataType.UUID, unique: true })
@@ -21,8 +21,8 @@ export class Project extends Model {
   @Column({ type: DataType.STRING })
   name: string;
 
-  @Column({ type: DataType.STRING })
-  description: string;
+  @Column({ type: DataType.STRING, allowNull: true })
+  description?: string;
 
   @HasMany(() => Task)
   tasks: Task[];
