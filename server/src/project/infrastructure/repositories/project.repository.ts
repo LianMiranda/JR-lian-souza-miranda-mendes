@@ -1,11 +1,17 @@
 import { IProjectRepository } from 'src/project/domain/repositories/project.repository.interface';
 import { ProjectMapper } from '../mappers/project.mapper';
 import { CustomError } from 'src/shared/errors/custom-error';
-import { ProjectModel } from '../database/models/project.model';
 import { Project } from 'src/project/domain/entities/project.entity';
+import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/sequelize';
+import { ProjectModel } from 'src/shared/infrastructure/database/models/project.model';
 
+@Injectable()
 export class ProjectRepository implements IProjectRepository {
-  constructor(private readonly projectModel: typeof ProjectModel) {}
+  constructor(
+    @InjectModel(ProjectModel)
+    private readonly projectModel: typeof ProjectModel,
+  ) {}
 
   async save(value: Project): Promise<void> {
     try {
