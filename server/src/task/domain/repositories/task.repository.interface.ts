@@ -5,6 +5,7 @@ export interface ITaskRepository extends BaseRepositoryInterface<Task> {
   save(value: Task): Promise<void>;
   findAll(): Promise<Task[]>;
   findById(id: string): Promise<Task | null>;
+  findByProjectId(id: string): Promise<Task[]>;
   update(value: Task): Promise<Task>;
   delete(id: string): Promise<void>;
 }

@@ -45,6 +45,16 @@ export class TaskRepository implements ITaskRepository {
     return TaskMapper.toDomain(task);
   }
 
+  async findByProjectId(id: string): Promise<Task[]> {
+    const tasks = await this.taskModel.findAll({
+      where: {
+        project_id: id,
+      },
+    });
+
+    return TaskMapper.toDomainArray(tasks);
+  }
+
   async update(value: Task): Promise<Task> {
     try {
       const [updatedRows] = await this.taskModel.update(value, {
