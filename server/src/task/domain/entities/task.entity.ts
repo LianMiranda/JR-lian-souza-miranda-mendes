@@ -1,6 +1,6 @@
 import { v4 } from 'uuid';
 
-enum TaskStatus {
+export enum TaskStatus {
   TODO = 'todo',
   DOING = 'doing',
   DONE = 'done',
