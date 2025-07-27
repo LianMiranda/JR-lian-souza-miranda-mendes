@@ -12,10 +12,9 @@ export class CreateTaskUseCase {
   ) {}
 
   async execute(input: CreateTaskDto) {
-    if (!input.title) throw new CustomError('Project name is required', 400);
+    if (!input.title) throw new CustomError('Task title is required', 400);
 
-    if (!input.project_id)
-      throw new CustomError('Project name is required', 400);
+    if (!input.project_id) throw new CustomError('Project id is required', 400);
 
     const task = new Task(input.title, input.project_id, input.description);
     return await this.taskRepository.save(task);
