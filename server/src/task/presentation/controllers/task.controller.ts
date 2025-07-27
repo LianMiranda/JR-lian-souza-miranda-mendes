@@ -14,6 +14,7 @@ import { CreateTaskUseCase } from 'src/task/application/use-cases/task/create.us
 import { DeleteTaskUseCase } from 'src/task/application/use-cases/task/delete.use-case';
 import { FindAllTasksUseCase } from 'src/task/application/use-cases/task/findAll.use-case';
 import { FindTaskByIdUseCase } from 'src/task/application/use-cases/task/findById.use-case';
+import { FindTaskByProjectIdUseCase } from 'src/task/application/use-cases/task/findByProjectId.use-case';
 import { UpdateTaskUseCase } from 'src/task/application/use-cases/task/update.use-case';
 
 @Controller('tasks')
@@ -24,6 +25,8 @@ export class TaskController {
   private readonly findAllTasksUseCase: FindAllTasksUseCase;
   @Inject(FindTaskByIdUseCase)
   private readonly findTaskByIdUseCase: FindTaskByIdUseCase;
+  @Inject(FindTaskByProjectIdUseCase)
+  private readonly findTaskByProjectIdUseCase: FindTaskByProjectIdUseCase;
   @Inject(DeleteTaskUseCase)
   private readonly deleteTaskUseCase: DeleteTaskUseCase;
   @Inject(UpdateTaskUseCase)
@@ -44,7 +47,10 @@ export class TaskController {
     return this.findTaskByIdUseCase.execute(id);
   }
 
-  //TODO: FIND BY PROJECT ID
+  @Get('project/:id')
+  findByProjectId(@Param('id') id: string) {
+    return this.findTaskByProjectIdUseCase.execute(id);
+  }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateProjectDto: UpdateTaskDto) {

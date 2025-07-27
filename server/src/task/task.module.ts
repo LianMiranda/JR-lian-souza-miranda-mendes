@@ -8,6 +8,7 @@ import { FindAllTasksUseCase } from './application/use-cases/task/findAll.use-ca
 import { FindTaskByIdUseCase } from './application/use-cases/task/findById.use-case';
 import { UpdateTaskUseCase } from './application/use-cases/task/update.use-case';
 import { DeleteTaskUseCase } from './application/use-cases/task/delete.use-case';
+import { FindTaskByProjectIdUseCase } from './application/use-cases/task/findByProjectId.use-case';
 
 @Module({
   imports: [SequelizeModule.forFeature([TaskModel])],
@@ -21,6 +22,7 @@ import { DeleteTaskUseCase } from './application/use-cases/task/delete.use-case'
     CreateTaskUseCase,
     FindAllTasksUseCase,
     FindTaskByIdUseCase,
+    FindTaskByProjectIdUseCase,
     UpdateTaskUseCase,
     DeleteTaskUseCase,
   ],
