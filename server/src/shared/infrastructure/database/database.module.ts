@@ -3,7 +3,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { ProjectModel } from './models/project.model';
 import config from './config/config';
 import { Dialect } from 'sequelize';
-import { Task } from './models/task.model';
+import { TaskModel } from './models/task.model';
 
 @Module({
   imports: [
@@ -14,7 +14,7 @@ import { Task } from './models/task.model';
       username: config.development.username,
       password: config.development.password,
       database: config.development.database,
-      models: [ProjectModel, Task],
+      models: [ProjectModel, TaskModel],
       autoLoadModels: true,
       synchronize: true,
     }),

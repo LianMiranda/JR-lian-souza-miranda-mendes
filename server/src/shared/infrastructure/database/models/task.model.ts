@@ -12,7 +12,7 @@ import {
 import { ProjectModel } from './project.model';
 
 @Table({ tableName: 'Task' })
-export class Task extends Model {
+export class TaskModel extends Model {
   @PrimaryKey
   @Column({ type: DataType.UUIDV4, unique: true })
   id: string;

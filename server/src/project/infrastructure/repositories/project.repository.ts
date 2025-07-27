@@ -5,6 +5,7 @@ import { Project } from 'src/project/domain/entities/project.entity';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { ProjectModel } from 'src/shared/infrastructure/database/models/project.model';
+import { TaskModel } from 'src/shared/infrastructure/database/models/task.model';
 
 @Injectable()
 export class ProjectRepository implements IProjectRepository {
@@ -28,7 +29,7 @@ export class ProjectRepository implements IProjectRepository {
   }
 
   async findAll(): Promise<Project[]> {
-    const projects = await this.projectModel.findAll();
+    const projects = await this.projectModel.findAll({ include: [TaskModel] });
 
     return ProjectMapper.toDomainArray(projects);
   }

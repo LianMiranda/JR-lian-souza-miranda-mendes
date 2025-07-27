@@ -9,7 +9,7 @@ import {
   Default,
   HasMany,
 } from 'sequelize-typescript';
-import { Task } from './task.model';
+import { TaskModel } from './task.model';
 
 @Table({ tableName: 'Project' })
 export class ProjectModel extends Model {
@@ -24,8 +24,8 @@ export class ProjectModel extends Model {
   @Column({ type: DataType.STRING, allowNull: true })
   description?: string;
 
-  @HasMany(() => Task)
-  tasks: Task[];
+  @HasMany(() => TaskModel)
+  tasks: TaskModel[];
 
   @CreatedAt
   @Column({ type: DataType.DATE })
