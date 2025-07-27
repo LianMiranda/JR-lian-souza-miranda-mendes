@@ -29,13 +29,19 @@ export class ProjectRepository implements IProjectRepository {
   }
 
   async findAll(): Promise<Project[]> {
-    const projects = await this.projectModel.findAll({ include: [TaskModel] });
+    const projects = await this.projectModel.findAll();
 
     return ProjectMapper.toDomainArray(projects);
   }
 
   async findById(id: string): Promise<Project | null> {
-    const project = await this.projectModel.findByPk(id);
+    const project = await this.projectModel.findByPk(id, {
+      include: [
+        {
+          model: TaskModel,
+        },
+      ],
+    });
 
     if (!project) {
       return null;

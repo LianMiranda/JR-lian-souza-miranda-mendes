@@ -1,9 +1,11 @@
+import { Task } from 'src/task/domain/entities/task.entity';
 import { v4 } from 'uuid';
 
 export class Project {
   id?: string;
   name: string;
   description: string;
+  tasks: Task[];
   created_at: Date;
   updated_at: Date;
 
@@ -23,6 +25,7 @@ export class Project {
     project.description = dbProject.description || '';
     project.created_at = dbProject.created_at;
     project.updated_at = dbProject.updated_at;
+    project.tasks = dbProject.tasks;
     return project;
   }
 
