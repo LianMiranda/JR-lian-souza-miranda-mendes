@@ -28,7 +28,7 @@ function goToProject(id: string) {
 }
 
 function updateProject(id: string) {
-  // Implementar lógica de atualização
+  router.push(`/update/project/${id}`)
 }
 
 async function deleteProject(id: string) {
