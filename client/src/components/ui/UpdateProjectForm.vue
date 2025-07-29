@@ -28,7 +28,7 @@ async function updateProject() {
             description: description.value
         });
 
-        router.push("/");
+        router.back();
     } catch (error) {
         console.error('Erro ao atualizar projeto:', error);
     } finally {
