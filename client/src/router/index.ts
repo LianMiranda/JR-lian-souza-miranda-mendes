@@ -23,7 +23,7 @@ const router = createRouter({
       component: UpdateProjectView,
     },
     {
-      path: '/projects/:id',
+      path: '/project/:id',
       name: 'project',
       component: ProjectView,
     }

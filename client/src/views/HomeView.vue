@@ -24,7 +24,7 @@ function goToRegistration() {
 }
 
 function goToProject(id: string) {
-  router.push(`/projects/${id}`);
+  router.push(`/project/${id}`);
 }
 
 function updateProject(id: string) {
