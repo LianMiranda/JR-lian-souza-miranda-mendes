@@ -33,8 +33,8 @@ export class TaskController {
   private readonly updateTaskUseCase: UpdateTaskUseCase;
 
   @Post()
-  create(@Body() createProjectDto: CreateTaskDto) {
-    return this.createTaskUseCase.execute(createProjectDto);
+  create(@Body() createTaskDto: CreateTaskDto) {
+    return this.createTaskUseCase.execute(createTaskDto);
   }
 
   @Get()
@@ -53,8 +53,8 @@ export class TaskController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateProjectDto: UpdateTaskDto) {
-    return this.updateTaskUseCase.execute(id, updateProjectDto);
+  update(@Param('id') id: string, @Body() updateTasktDto: UpdateTaskDto) {
+    return this.updateTaskUseCase.execute(id, updateTasktDto);
   }
 
   @Delete(':id')
