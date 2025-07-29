@@ -15,7 +15,7 @@ interface Task {
 }
 
 const columns = ref([
-    { title: 'Todo', status: 'todo', tasks: [] as Task[] },
+    { title: 'To do', status: 'todo', tasks: [] as Task[] },
     { title: 'Doing', status: 'doing', tasks: [] as Task[] },
     { title: 'Done', status: 'done', tasks: [] as Task[] },
 ]);
