@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import CreateProjectView from '@/views/CreateProjectView.vue'
 import UpdateProjectView from '@/views/UpdateProjectView.vue'
 import ProjectView from '@/views/ProjectView.vue'
+import CreateTaskView from '@/views/task/CreateTaskView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/project/:id',
       name: 'project',
       component: ProjectView,
+    },
+    {
+      path: '/project/:id/create-task',
+      name: 'create task',
+      component: CreateTaskView,
     }
   ],
 })
