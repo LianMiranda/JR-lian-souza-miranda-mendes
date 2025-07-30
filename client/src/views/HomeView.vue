@@ -90,7 +90,7 @@ async function deleteProject(id: string) {
         </div>
       </div>
 
-      <div v-else class="text-center py-16">
+      <div v-else class="flex items-center justify-center text-center py-16">
         <div class="max-w-md mx-auto">
           <h3 class="text-2xl font-bold text-black">Nenhum projeto encontrado</h3>
           <Button @click="goToRegistration">
@@ -101,10 +101,3 @@ async function deleteProject(id: string) {
     </div>
   </div>
 </template>
-
-<style scoped>
-.container {
-  min-width: 100%;
-  padding: 2%;
-}
-</style>
