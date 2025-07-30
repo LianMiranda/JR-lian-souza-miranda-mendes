@@ -156,8 +156,18 @@ VITE_API_URL=http://localhost:3000
 git clone https://github.com/LianMiranda/JR-lian-souza-miranda-mendes.git
 cd JR-lian-souza-miranda-mendes
 ```
+2. Preencha os dados do arquivo .env da pasta "server" com os dados do banco de dados mysql do docker-compose
+   
+```env
+##Db config
+DB_NAME=teste
+DB_USER=usertest
+DB_PASSWORD=passtest
+DB_HOST=mysql  
+DB_PORT=3306
+```
 
-2. Execute com Docker Compose
+3. Execute com Docker Compose
 ```bash
 docker-compose up -d
 ```
