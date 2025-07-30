@@ -43,7 +43,7 @@ Antes de iniciar o projeto, é necessário configurar as variáveis de ambiente.
 
 ```bash
 git clone https://github.com/LianMiranda/JR-lian-souza-miranda-mendes.git
-cd JR-lian-souza-miranda-mendes.git
+cd JR-lian-souza-miranda-mendes
 ```
 
 ### 2. Configure as variáveis de ambiente
