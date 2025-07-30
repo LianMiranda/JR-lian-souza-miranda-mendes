@@ -11,6 +11,7 @@ interface Project {
   description: string;
 }
 
+const loading = ref(false);
 const projects = ref<Project[]>([]);
 
 axios.get('projects').then((res) => {
@@ -33,6 +34,7 @@ function updateProject(id: string) {
 
 async function deleteProject(id: string) {
   if (confirm('Tem certeza que deseja deletar este projeto?')) {
+    loading.value = true;
     await axios.delete(`/projects/${id}`);
     window.location.reload();
   }
@@ -78,7 +80,7 @@ async function deleteProject(id: string) {
           <div class="flex justify-end mb-2 gap-2">
             <button class="text-sm px-2 py-1 bg-red-100 text-red-600 rounded hover:bg-red-200 transition"
               @click.stop="deleteProject(project.id)">
-              Deletar
+              {{ loading ? "Deletando..." : "Deletar" }}
             </button>
             <button class="text-sm px-2 py-1 bg-blue-100 text-blue-600 rounded hover:bg-blue-200 transition"
               @click.stop="updateProject(project.id)">

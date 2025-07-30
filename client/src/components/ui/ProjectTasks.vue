@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import router from '@/router';
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
@@ -6,6 +7,8 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 const projectId = route.params.id;
+
+const loading = ref(false)
 
 interface Task {
     id: string;
@@ -46,6 +49,7 @@ async function updateTask(id: string) {
 
 async function deleteTask(id: string) {
     if (confirm('Tem certeza que deseja deletar este projeto?')) {
+        loading.value = true
         await axios.delete(`/tasks/${id}`);
         window.location.reload();
     }
@@ -60,7 +64,8 @@ onMounted(fetchTasks)
             class="bg-white rounded-2xl p-4 shadow-md w-70 flex-shrink-0">
             <h2 class="text-center text-lg font-semibold mb-4">{{ column.title }}</h2>
             <div class="flex flex-col gap-3">
-                <div v-for="(task, tIndex) in column.tasks" :key="tIndex" class="flex flex-col gap-2 bg-gray-100 p-3 rounded-lg shadow-sm">
+                <div v-for="(task, tIndex) in column.tasks" :key="tIndex"
+                    class="flex flex-col gap-2 bg-gray-100 p-3 rounded-lg shadow-sm">
                     <h3
                         class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                         {{ task.title }}
@@ -71,7 +76,7 @@ onMounted(fetchTasks)
                     <div class="flex justify-end gap-2">
                         <button class="text-sm px-2 py-1 bg-red-100 text-red-600 rounded hover:bg-red-200 transition"
                             @click.stop="deleteTask(task.id)">
-                            Deletar
+                            {{ loading ? 'Deletando' : 'Deletar' }}
                         </button>
                         <button class="text-sm px-2 py-1 bg-blue-100 text-blue-600 rounded hover:bg-blue-200 transition"
                             @click.stop="updateTask(task.id)">
