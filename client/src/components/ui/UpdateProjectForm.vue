@@ -44,7 +44,7 @@ function handleSubmit(event: Event) {
 </script>
 
 <template>
-    <form @submit="handleSubmit" class="flex flex-col bg-dark h-full p-8 gap-5">
+    <form @submit="handleSubmit" class="flex flex-col bg-dark h-full px-36 gap-5">
         <h2 class="text-2xl font-bold text-center text-black">Atualizar</h2>
 
         <div>
