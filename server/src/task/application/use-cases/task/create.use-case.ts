@@ -16,7 +16,12 @@ export class CreateTaskUseCase {
 
     if (!input.project_id) throw new CustomError('Project id is required', 400);
 
-    const task = new Task(input.title, input.project_id, input.description);
+    const task = new Task(
+      input.title,
+      input.project_id,
+      input.status,
+      input.description,
+    );
     return await this.taskRepository.save(task);
   }
 }

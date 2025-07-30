@@ -15,18 +15,28 @@ export class Task {
   created_at: Date;
   updated_at: Date;
 
-  constructor(title: string, project_id: string, description?: string) {
+  constructor(
+    title: string,
+    project_id: string,
+    status: TaskStatus,
+    description?: string,
+  ) {
     this.id = v4();
     this.title = title;
     this.description = description;
-    this.status = TaskStatus.TODO;
+    this.status = status;
     this.project_id = project_id;
     this.created_at = new Date();
     this.updated_at = new Date();
   }
 
   static fromDatabase(dbTask: any): Task {
-    const task = new Task(dbTask.title, dbTask.project_id, dbTask.description);
+    const task = new Task(
+      dbTask.title,
+      dbTask.project_id,
+      dbTask.description,
+      dbTask.status,
+    );
 
     task.id = dbTask.id;
     task.title = dbTask.title;
