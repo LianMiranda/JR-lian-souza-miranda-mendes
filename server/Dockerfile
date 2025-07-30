@@ -7,6 +7,6 @@ COPY . .
 RUN rm -rf node_modules
 RUN npm install
 
-CMD ["npm", "start"]
+CMD ["sh", "-c", "npm run migrate && npm run start:prod"]
 
 EXPOSE 3000
