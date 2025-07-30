@@ -8,6 +8,7 @@ Este é o backend do teste técnico para a empresa SolarMarket.
 - [Pré-requisitos](#pré-requisitos)
 - [Configurações](#configurações)
 - [Instalação](#instalação)
+- [Rotas](#rotas)
 
 ## Tecnologias Utilizadas
 
