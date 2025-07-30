@@ -119,7 +119,7 @@ DB_PORT=db_port
 PORT=app_port
 ```
 
-Preencha as variáveis conforme necessário. Exemplo de variáveis esperadas caso use rode com o docker:
+Preencha as variáveis conforme necessário. Exemplo de variáveis esperadas caso rode com o docker:
 
 ```env
 ##Db config
