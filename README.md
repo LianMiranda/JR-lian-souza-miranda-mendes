@@ -2,6 +2,8 @@
 
 Esta aplicação de gerenciamento de projetos foi desenvolvida como parte do teste técnico para a empresa SolarMarket.
 
+> A aplicação não tem suporte para o modo escuro do navegador.
+
 ## Índice
 
 - [Sobre o Projeto](#sobre-o-projeto)
