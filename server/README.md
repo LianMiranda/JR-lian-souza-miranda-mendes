@@ -86,6 +86,9 @@ PORT=3000
 ### Como rodar
 
 ```bash
+#Entre no diretório do backend
+cd server
+
 # Instalar dependências
 npm install
 
