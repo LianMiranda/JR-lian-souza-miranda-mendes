@@ -8,7 +8,7 @@ Esta aplicação de gerenciamento de projetos foi desenvolvida como parte do tes
 - [Telas do Projeto](#telas-do-projeto)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Pré-requisitos](#pré-requisitos)
-- [Configuração](#configuração)
+- [Configurações](#configurações)
 - [Instalação](#instalação)
 
 ## Sobre o Projeto
