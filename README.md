@@ -74,12 +74,6 @@ git --version
 
 ## Configurações
 
-Claro! Aqui está um exemplo de seção **"## ⚙️ Configurações"** para o seu `README.md`, incluindo instruções para uso de variáveis de ambiente com base no arquivo `.env.example`:
-
----
-
-## ⚙️ Configurações
-
 Antes de iniciar o projeto, é necessário configurar as variáveis de ambiente. Siga os passos abaixo:
 
 ### 1. Clone o repositório
@@ -163,4 +157,4 @@ docker-compose up -d
 [Client](https://github.com/LianMiranda/JR-lian-souza-miranda-mendes/tree/main/client)
 
 
-**[⬆ Voltar ao topo](#nome-do-projeto)**
+**[⬆ Voltar ao topo](#teste-solarMarket)**
