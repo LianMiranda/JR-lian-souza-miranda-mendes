@@ -17,7 +17,7 @@ import { UUIDV4 } from 'sequelize';
 export class TaskModel extends Model {
   @PrimaryKey
   @Default(UUIDV4)
-  @Column({ type: DataType.UUIDV4, unique: true })
+  @Column({ type: DataType.UUID, unique: true })
   id: string;
 
   @Column({ type: DataType.STRING })
@@ -30,7 +30,7 @@ export class TaskModel extends Model {
   status: 'todo' | 'doing' | 'done';
 
   @ForeignKey(() => ProjectModel)
-  @Column({ type: DataType.UUIDV4 })
+  @Column({ type: DataType.UUID })
   project_id: string;
 
   @BelongsTo(() => ProjectModel)
