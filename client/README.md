@@ -1,45 +1,89 @@
-# client
+# Teste SolarMarket - Client
 
-This template should help get you started developing with Vue 3 in Vite.
+Este é o frontend do teste técnico para a empresa SolarMarket.
 
-## Recommended IDE Setup
+## Índice
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Pré-requisitos](#pré-requisitos)
+- [Configurações](#configurações)
+- [Instalação](#instalação)
 
-## Type Support for `.vue` Imports in TS
+## Tecnologias Utilizadas
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### Frontend
 
-## Customize configuration
+* **Vue.js** – Framework JavaScript para interfaces reativas
+* **TypeScript** - Superset do JavaScript com tipagem estática
+* **Tailwind CSS** – Framework utilitário para estilização rápida
+* **Axios** – Cliente HTTP para requisições assíncronas
+* **Prettier** – Formatador automático de código
+* **Dotenv** – Gerenciador de variáveis de ambiente
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Pré-requisitos
 
-## Project Setup
+Antes de começar, verifique se você tem os seguintes requisitos instalados:
 
-```sh
+- Node.js (versão 16.0 ou superior)
+- npm ou yarn
+- Git
+
+```bash
+# Verificar versões
+node --version
+npm --version
+git --version
+```
+
+## Configurações
+
+Antes de iniciar o projeto, é necessário configurar as variáveis de ambiente. Siga os passos abaixo:
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/LianMiranda/JR-lian-souza-miranda-mendes.git
+cd JR-lian-souza-miranda-mendes.git
+```
+
+### 2. Configure as variáveis de ambiente
+
+Crie um arquivo `.env` na pasta "client" e copie o conteúdo do `.env.example`:
+
+```bash
+VITE_API_URL=api_url
+```
+
+Preencha a variável com a url da API. Exemplo de variáveis esperadas:
+
+```env
+VITE_API_URL=http://localhost:3000
+```
+
+## Instalação
+
+### Como rodar
+
+```bash
+# Instalar dependências
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Rodar em modo desenvolvimento
 npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
+# Lint + formatação
 npm run lint
+npm run format
 ```
+
+### Para acessar
+
+Acesse a ulr informada no terminal. Deve ser algo como:
+http://localhost:5173/
+
+
+>**Nota 01:** Certifique-se que o backend esteja rodando em um terminal separado.
+
+
+
+
