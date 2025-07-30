@@ -65,6 +65,9 @@ VITE_API_URL=http://localhost:3000
 ### Como rodar
 
 ```bash
+#Entre no diretório do frontend
+cd client
+
 # Instalar dependências
 npm install
 
