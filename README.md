@@ -21,14 +21,31 @@ Este já era um projeto que eu tinha vontade de desenvolver, como forma de prati
 
 ### Telas do Projeto
 
+#### Tela principal
 ![Tela principal](./app_images/initial_page.png)
+
+#### Tela de criação do projeto
 ![Tela de criação do projeto](./app_images/create_project_page.png)
+
+#### Tela principal com um projeto criado
 ![Tela principal com um projeto criado](./app_images/inital_page_with_project.png)
+
+#### Tela de atualização do projeto
 ![Tela de atualização do projeto](./app_images/update_project_page.png)
+
+#### Tela das tarefas
 ![Tela das tarefas](./app_images/tasks_page.png)
+
+#### Tela de criação das tarefas
 ![Tela de criação das tarefas](./app_images/create_task_page.png)
+
+#### Tela das tarefas com uma tarefa criada
 ![Tela das tarefas com uma tarefa criada](./app_images/tasks_page_with_task.png)
+
+#### Tela de atualização das tarefas
 ![Tela de atualização das tarefas](./app_images/update_task_page.png)
+
+#### Tela das tarefas com a tarefa atualizada
 ![Tela das tarefas com a tarefa atualizada](./app_images/task_after_being_updated.png)
 
 ## Tecnologias Utilizadas
