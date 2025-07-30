@@ -180,6 +180,7 @@ docker-compose up -d
   * Criaria um layout melhor.
   * Estudaria e aplicaria mais sobre a arquitetura do frontend.
   * Pensei em adicionar um sistema drag and drop na parte das tarefas, mas não tive muita segurança para implementar com o tempo que eu tinha.
+  * Faria uma API GraphQL em vez de REST, como não conheo muito sobre a GraphQL não tive segurança em fazer.
 
 
 ## O que gostaria de melhorar
