@@ -44,7 +44,7 @@ const fetchTasks = async () => {
 };
 
 async function updateTask(id: string) {
-
+    router.push(`/update/task/${id}`)
 }
 
 async function deleteTask(id: string) {
