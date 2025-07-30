@@ -156,7 +156,7 @@ VITE_API_URL=http://localhost:3000
 git clone https://github.com/LianMiranda/JR-lian-souza-miranda-mendes.git
 cd JR-lian-souza-miranda-mendes
 ```
-2. Preencha os dados do arquivo .env da pasta "server" com os dados do banco de dados mysql do docker-compose
+2. Preencha os dados do arquivo .env, da pasta "server", com os dados do banco de dados MySQL definido no docker-compose
    
 ```env
 ##Db config
