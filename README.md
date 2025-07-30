@@ -10,6 +10,8 @@ Esta aplicação de gerenciamento de projetos foi desenvolvida como parte do tes
 - [Pré-requisitos](#pré-requisitos)
 - [Configurações](#configurações)
 - [Instalação](#instalação)
+- [O que faria diferente com mais tempo](#o-que-faria-diferente-com-mais-tempo)
+- [O que gostaria de melhorar](#o-que-gostaria-de-melhorar)
 
 ## Sobre o Projeto
 
@@ -122,7 +124,7 @@ Crie um arquivo `.env` na pasta "client" e copie o conteúdo do `.env.example`:
 VITE_API_URL=api_url
 ```
 
-Preencha as variáveis conforme necessário. Exemplo de variáveis esperadas:
+Preencha a variável com a url da API. Exemplo de variáveis esperadas:
 
 ```env
 VITE_API_URL=http://localhost:3000
@@ -155,6 +157,17 @@ docker-compose up -d
 
 2. Para a documentação do frontend acesse:
 [Client](https://github.com/LianMiranda/JR-lian-souza-miranda-mendes/tree/main/client)
+
+## O que faria diferente com mais tempo
+  * Daria um foco melhor nas questões de segurança da aplicação, como o retorno da API por exemplo.
+  * Criaria um layout melhor.
+  * Estudaria e aplicaria mais sobre a arquitetura do frontend.
+  * Pensei em adicionar um sistema drag and drop na parte das tarefas, mas não tive muita segurança para implementar com o tempo que eu tinha.
+
+
+## O que gostaria de melhorar
+  * Me senti meio enferrujado com o VueJs no geral, fazer esse projeto foi muito bom para "destravá-lo" de certa forma, além de reacender o meu interesse. Com certeza vou estudar mais sobre ele.
+  * Tive dificuldade com a implementação do Sequelize no TypeScript, outro ponto que vou estudar mais.
 
 
 **[⬆ Voltar ao topo](#teste-solarMarket)**
