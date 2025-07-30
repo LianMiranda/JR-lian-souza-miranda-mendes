@@ -38,7 +38,7 @@ function handleSubmit(event: Event){
 
 <template>
     <form @submit="handleSubmit" class="flex flex-col bg-dark h-full p-8 gap-5">
-        <h2 class="text-2xl font-bold text-center text-black">Cadastro</h2>
+        <h2 class="text-2xl font-bold text-center text-black">Criar projeto</h2>
 
         <div>
             <label class="block mb-1 text-sm font-medium text-black">Nome</label>
