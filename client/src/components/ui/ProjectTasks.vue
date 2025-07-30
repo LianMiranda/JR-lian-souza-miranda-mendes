@@ -15,6 +15,7 @@ interface Task {
     title: string;
     description: string;
     status: 'todo' | 'doing' | 'done';
+    created_at: Date
 }
 
 const columns = ref([
@@ -55,6 +56,10 @@ async function deleteTask(id: string) {
     }
 }
 
+const formatDate = (date: Date) => {
+    return new Date(date).toLocaleDateString('pt-BR');
+};
+
 onMounted(fetchTasks)
 </script>
 
@@ -72,6 +77,9 @@ onMounted(fetchTasks)
                     </h3>
                     <p class="text-gray-600 leading-relaxed line-clamp-3">
                         {{ task.description }}
+                    </p>
+                    <p class="text-gray-600 leading-relaxed line-clamp-3" style="font-size: 12px;">
+                        Criado em: {{ formatDate(task.created_at) }}
                     </p>
                     <div class="flex justify-end gap-2">
                         <button class="text-sm px-2 py-1 bg-red-100 text-red-600 rounded hover:bg-red-200 transition"
