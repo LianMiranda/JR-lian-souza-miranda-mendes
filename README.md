@@ -165,6 +165,7 @@ docker-compose up -d
 3. Abra no navegador 
 [Acesse o projeto online](http://localhost/)
 
+> A url provavelmente será: http://localhost/
 > **Nota:** Certifique-se de que o Docker esteja instalado e em execução antes de iniciar os containers.
 
 ### Instalação Local
